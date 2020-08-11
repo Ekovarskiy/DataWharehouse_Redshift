@@ -29,6 +29,8 @@ Therefore the database is needed in order to facilitate and speed up such analys
 
 ### Database Structure
 
+![Image of ERD](https://github.com/Ekovarskiy/DataWharehouse_Redshift/blob/master/ERD.png)
+
 The event (fact) in the log can be described as Some **User** listens to some **Song** by some **Artist** at **Time**,  therefore it is logical to use Star Schema, where the fact table (**SongPlay_Table**) would contain information on the events and a series of dimension tables would contain details of theses events, such as **Song_Table** description, **Artist_Table** information, **User_Table** information and **Time_Table**. Also such structure reflects aspects Sparkify Analytics are interested in, so their potential queries would be easier to perform.
 
 It is worth mentioning that the same manner **Timestamp** column from **SongPlay_Table** is parsed into **Year, Month, Day, etc.** the column **Location** can be parsed into **State, City, Street** columns to make geospatial analysis easier.
