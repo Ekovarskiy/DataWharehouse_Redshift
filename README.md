@@ -1,9 +1,25 @@
 ## **Data WH on Redshift**
 
+### AWS Infrastructure
+
+Infrustructer for the future Data Warehouse is created automatically via AWS python wrapper boto3
+
+### Input Data
+
+The data comes from two sources
+
+    1. Million Songs Database
+    2. Radio Log Data (below is an example of log data)
+  
+   ![Image of Log](https://github.com/Ekovarskiy/DataWharehouse_Redshift/blob/master/log-data.png)
+
+Data resides on Amazon S3 instance and the data for analysis will be stored on Redshift. To automate ETL pipline it was implemented via Apache Airflow. The scheme is shown below
+
+![Image of Dag](https://github.com/Ekovarskiy/DataWharehouse_Redshift/blob/master/example-dag.png)
 
 ### The purpose of the database
 
-Sparkify Analytics are intersted in the analysis of the songs users of their service listen to, the purpose of this analysis is probably to understand
+Analytics are intersted in the analysis of the songs users of their service listen to, the purpose of this analysis is probably to understand
     - What songs and artists are the most popular
     - When do users listen to music, is there any seasoning
     - What is the geographical distribution of music preferencies
